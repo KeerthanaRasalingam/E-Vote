@@ -1,2 +1,2 @@
-cd server && yarn start &
-cd client && yarn start
+cd server && yarn install && yarn run build &
+cd client && yarn install && yarn run start
