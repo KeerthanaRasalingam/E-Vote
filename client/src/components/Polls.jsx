@@ -22,8 +22,16 @@ class Polls extends Component {
     const { getPolls, getUserPolls, auth } = this.props;
 
     const polls = this.props.polls.map(poll => (
-      <li onClick={() => this.handleSelect(poll._id)} key={poll._id}>
-        {poll.question}
+      <li className="card">
+        <dev
+          className="card-item"
+          onClick={() => this.handleSelect(poll._id)}
+          key={poll._id}>
+          {poll.question}
+        </dev>
+        {!poll.user.hasOwnProperty('username') ? (
+          <button className="navbar-out">Delete</button>
+        ) : null}
       </li>
     ));
 

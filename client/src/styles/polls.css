@@ -1,7 +1,6 @@
-.poll-container{
+.poll-container {
   padding-top: 2rem;
   background-color: var(--light);
-
 }
 
 .polls li {
@@ -28,4 +27,15 @@
   margin-top: 1rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-item {
+  width: 65vw;
+  height: 100%;
 }

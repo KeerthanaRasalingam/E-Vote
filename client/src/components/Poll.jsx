@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Pie } from 'react-chartjs-2';
 
@@ -33,7 +33,13 @@ const Poll = ({ poll, vote }) => {
     <div>
       <h3 className="poll-title">{poll.question}</h3>
       <div className="buttons_center">{answers}</div>
+
       <Pie data={data} />
+
+      <div className="buttons_center">
+        Total votes -{' '}
+        {poll && poll.voted && poll.voted.length ? poll.voted.length : 0}
+      </div>
     </div>
   );
 };
